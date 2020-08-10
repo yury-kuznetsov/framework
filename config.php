@@ -5,7 +5,7 @@ return [
     'components' => [
         'db' => [
             'class' => 'core\components\Database',
-            'dsn' => 'mysql:host=127.0.0.1;dbname=phone_book;charset=utf8',
+            'dsn' => 'mysql:host=127.0.0.1;dbname=framework;charset=utf8',
             'user' => 'root',
             'password' => ''
         ],

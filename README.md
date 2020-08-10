@@ -8,7 +8,7 @@
 
 ### Контроллеры
 Вся бизнес-логика расписывается в моделях, из-за чего контроллеры реализованы минимумом кода.
-```
+```php
 public function create()
 {
     $model = new RegisterForm();
@@ -26,7 +26,7 @@ public function create()
 
 ### Модели
 Модель содержит список правил для валидации входных данных.
-```
+```php
 public function rules()
 {
     return [
@@ -42,7 +42,7 @@ public function rules()
 
 ### Active Record
 Шаблон Active Record позволяет упростить работу с базой данных.
-```
+```php
 public function register()
 {
     if (!$this->validate()) {
