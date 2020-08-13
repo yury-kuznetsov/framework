@@ -1,9 +1,8 @@
 <?php
 
-namespace core\components;
+namespace core\components\user;
 
 use Core;
-use core\base\ActiveRecord;
 use core\base\Component;
 
 /**
@@ -27,6 +26,10 @@ class User extends Component
      * @var string
      */
     protected $_identityClass;
+    /**
+     * @var string
+     */
+    protected $_identityKey = 'identity_id';
 
 
     /**
@@ -47,7 +50,7 @@ class User extends Component
     public function init()
     {
         parent::init();
-        $this->id = Core::$app->session->get('identity_id');
+        $this->id = Core::$app->session->get($this->_identityKey);
     }
 
     /**
@@ -61,7 +64,7 @@ class User extends Component
     {
         $this->id = $user->getId();
         $this->_identity = $user;
-        Core::$app->session->set('identity_id', $this->id);
+        Core::$app->session->set($this->_identityKey, $this->id);
 
         return true;
     }
@@ -75,7 +78,7 @@ class User extends Component
     {
         $this->id = null;
         $this->_identity = null;
-        Core::$app->session->remove('identity_id');
+        Core::$app->session->remove($this->_identityKey);
 
         return true;
     }

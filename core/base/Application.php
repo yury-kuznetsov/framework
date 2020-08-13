@@ -3,11 +3,11 @@
 namespace core\base;
 
 use Core;
-use core\components\Database;
+use core\components\db\Database;
 use core\components\Request;
 use core\components\Response;
 use core\components\Session;
-use core\components\User;
+use core\components\user\User;
 
 /**
  * Class Application

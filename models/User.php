@@ -2,8 +2,8 @@
 
 namespace app\models;
 
-use core\base\ActiveRecord;
-use core\components\IdentityInterface;
+use core\components\db\ActiveRecord;
+use core\components\user\IdentityInterface;
 
 /**
  * Class User

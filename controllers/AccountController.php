@@ -30,27 +30,6 @@ class AccountController extends Controller
     }
 
     /**
-     * Updates user profile.
-     *
-     * @return mixed
-     */
-    public function profile()
-    {
-        $updated = false;
-
-        $model = new ProfileForm();
-        if ($model->load($_POST) && $model->update()) {
-            $updated = true;
-        }
-
-        return $this->asHtml('profile', [
-            'model' => $model,
-            'updated' => $updated
-        ]);
-
-    }
-
-    /**
      * Log In action.
      *
      * @return Response|mixed

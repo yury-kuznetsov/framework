@@ -16,7 +16,7 @@ class DefaultController extends Controller
     {
         $username = 'Guest';
         if (!Core::$app->user->isGuest()) {
-            $username = Core::$app->user->identity->login;
+            $username = Core::$app->user->identity->{'login'};
         }
 
         return $this->asHtml('index', [

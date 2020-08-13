@@ -1,6 +1,6 @@
 <?php
 
-namespace core\components;
+namespace core\components\db;
 
 use core\base\Component;
 use PDO;

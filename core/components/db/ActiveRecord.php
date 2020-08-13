@@ -1,8 +1,9 @@
 <?php
 
-namespace core\base;
+namespace core\components\db;
 
 use Core;
+use core\base\Model;
 
 class ActiveRecord extends Model
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace core\components;
+namespace core\components\user;
 
 interface IdentityInterface
 {
